@@ -354,18 +354,18 @@
 						</div>
 	  
 							<div class="col-lg-6">
-								<form class="row g-3">
+								<form name="portfolio-kontak-form" class="row g-3">
 									<div class="form-group">
 										<label for="Nama" class="form-label">Full Name</label>
-										<input type="text" class="form-control" id="nama" placeholder="full name">
+										<input type="text" class="form-control" id="nama" placeholder="full name" name="nama">
 									</div>
 									<div class="form-group">
 										<label for="Email" class="form-label">Email</label>
-										<input type="email" class="form-control" id="email" placeholder="email">
+										<input type="email" class="form-control" id="email" placeholder="email" name="email">
 									</div>
 									<div class="form-group">
 										<label for="telp" class="form-label">No Telepon/HP</label>
-										<input type="tel" class="form-control" id="telp" placeholder="no telphone/hp">
+										<input type="tel" class="form-control" id="telp" placeholder="no telphone/hp" name="nomor hp">
 									</div>
 									<div class="form-group">
 										<label for="pesan" class="form-label">Message</label>
@@ -399,5 +399,17 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script src="js/script.js"></script>
+
+		<script>
+			const scriptURL = '<https://script.google.com/macros/s/AKfycbzLXg_0Acpj6qwRGGFXPLleP8_aD5_j-E8cVFDW0PaPKVfNjmexgbsM7A_-OoT0BEq00Q/exec>'
+			const form = document.forms['portfolio-kontak-form']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
 	</body>
 </html>
