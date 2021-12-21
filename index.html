@@ -330,11 +330,15 @@
 			</div> -->
 			<section class="contact" id="contact">
 				<div class="container">
-					<div class="row">
+					<div class="row mb-4">
 						<div class="col text-center">
 						  <h2>Contact Us</h2>
 						</div>
 					</div>
+					<div class="alert alert-secondary alert-dismissible fade show d-none my-alert" role="alert">
+						<strong>Terima kasih!</strong> Pesan anda sudah kami terima.
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					  </div>
 	
 					<div class="row justify-content-center">
 						<div class="col-lg-4 text-center">
@@ -352,8 +356,7 @@
 								<li class="list-group-item">DKI Jakarta, Indonesia</li>
 							  </ul>
 						</div>
-	  
-							<div class="col-lg-6">
+						<div class="col-lg-6">
 								<form name="portfolio-kontak-form" class="row g-3">
 									<div class="form-group">
 										<label for="Nama" class="form-label">Full Name</label>
@@ -372,7 +375,11 @@
 										<textarea name="pesan" id="pesan" class="form-control" placeholder="write a message"></textarea>
 									</div>
 									<div class="form-group">
-										<button type="submit" class="btn btn-primary mb-3">Send message</button>
+										<button type="submit" class="btn btn-primary mb-3 btn-kirim">Send message</button>
+										<button class="btn btn-primary btn-loading d-none" type="button" disabled>
+											<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+											Loading...
+										  </button>
 									</div>
 								</form>
 							</div>
@@ -403,13 +410,23 @@
 		<script>
 			const scriptURL = 'https://script.google.com/macros/s/AKfycbzLXg_0Acpj6qwRGGFXPLleP8_aD5_j-E8cVFDW0PaPKVfNjmexgbsM7A_-OoT0BEq00Q/exec'
 			const form = document.forms['portfolio-kontak-form']
-		  
+
+			const btnKirm = document.querySelector('.btm-kirim');
+			const btnLoading = document.querySelector('.btn-loading');
+			const btnLoading = myAlert.querySelector('.my-alert');
+
+
 			form.addEventListener('submit', e => {
 			  e.preventDefault()
-			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response))
-				.catch(error => console.error('Error!', error.message))
-			})
+			   // ketika tombol submit diklik
+			   // tampilkan tombol loading, hilangkan tombol kirim
+
+			   btnLoading.classList.toggle('d-none');
+			   btnKirm.classList.toggle('d-none');
+			   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			   .then(response => console.log('Success!', response))
+			   .catch(error => console.error('Error!', error.message));
+			});
 		  </script>
 	</body>
 </html>
