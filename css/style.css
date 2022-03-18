@@ -17,7 +17,7 @@
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0, 5);
 }
 
-#teams {
+#study {
 	background-color: #e2edff;
 }
 section {
@@ -63,33 +63,33 @@ section {
 /* .teams .title::after {
 	content: "who with me";
 } */
-.teams .carousel .card {
+.study .carousel .card {
 	background: #e2edff;
-	border-radius: 6px;
+	border-radius: 10px;
 	padding: 25px 35px;
 	text-align: center;
 	overflow: hidden;
 	transition: all 0.3s ease;
 }
-.teams .carousel .card:hover {
+.study .carousel .card:hover {
 	background: lightsteelblue;
 }
-.teams .carousel .card .box {
+.study .carousel .card .box {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box {
+.study .carousel .card:hover .box {
 	transform: scale(1.05);
 }
-.teams .carousel .card .text {
+.study .carousel .card .text {
 	font-size: 25px;
 	font-weight: 500;
 	margin: 10px 0 7px 0;
 }
-.teams .carousel .card img {
+.study .carousel .card img {
 	height: 200px;
 	width: 200px;
 	object-fit: cover;
@@ -98,7 +98,7 @@ section {
 	transition: all 0.3s ease;
 	text-align: center;
 }
-.teams .carousel .card:hover img {
+.study .carousel .card:hover img {
 	border-color: #fff;
 }
 .owl-dots {
