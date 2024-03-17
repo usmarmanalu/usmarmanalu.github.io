@@ -431,6 +431,15 @@ nav .fa-solid {
         font-size: 14px;
     }
 
+    .layer h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .layer P {
+        font-size: 18px;
+    }
+
     .tab-links {
         font-size: 16px;
         margin-right: 20px;
