@@ -32,7 +32,7 @@ function closemenu() {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        msg.innerHTML = "Sukses!!, Pesan Anda telah terkirim"
+        msg.innerHTML = "Sukses!!, Pesan Anda telah terkirim."
         setTimeout(function() {
             msg.innerHTML = ""
         }, 5000)
