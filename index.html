@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usmar Manalu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dde1146e1a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Android Developer | Data analyst </p>
+                <h1>Hi, I'am <span>Usmar Manalu</span><br>from Jakarta, Indonesia</h1>
+            </div>
+        </div>
+    </div>
+
+<!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/usmarmanalu.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-text">I'am a Bangkit 2023 batch 2 graduate, specializing in mobile application development, currently pursuing a Bachelor's degree in Information Technology. Additionally, I am currently focusing on learning data analytics. I also serve as the Media Information Leader at the Student Executive Board (BEM) of the Faculty of Informatics. With a high enthusiasm for exploring technology, I am dedicated to creating innovative solutions and leading teams towards success. As someone who focuses on mobile application development and is also learning about data analytics, I am skilled in interpreting and analyzing complex datasets as well as developing quality mobile applications. I am actively seeking collaboration opportunities in the technology industry for personal and professional growth. I believe that through solid partnerships, we can achieve breakthroughs and make positive contributions to the world of technology.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Android Developer</span><br>Develop Android applications using Kotlin.</li>
+                            <li><span>Data Analyst</span><br>Analyze data using Python and R for insights and decision-making.</li>
+                            <li><span>Program Analyst</span><br>Analyze programs and applications for optimization, utilizing both web and app platforms.</li>
+                            <li><span>Git & Github</span><br>Proficient in using Git and Github for version control and collaboration.</li>
+                            <li><span>Communication</span><br>Strong verbal and written communication skills, able to convey technical concepts effectively to both technical and non-technical stakeholders.</li>
+                            <li><span>Problem Solving</span><br>Skilled in identifying and solving complex problems efficiently.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>August 2023 - January 2024</span><br>MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka<br>Mobile Development Student (Graduated)</li>
+                            <li><span>November - Desember 2023</span><br>Capstone Project | SaveMoney App<br>The Bangkit Academy Final Project collaborates with students on the cloud computing and machine learning learning path.<br><br>• An application designed to efficiently consolidate and manage finances. With a user-friendly and intuitive interface, this app can help users track their expenses more easily. It also serves as a comprehensive tool that enhances financial literacy and aids individuals in achieving their financial goals 📱💸.</li>
+                            <li><span>March 2023 - Current</span><br>BEM Faculty of Informatics Engineering<br>Divisi Creative Director<br><br>• Designed promotional materials including Instagram
+                                content, posters, banners, and standing banners.
+                                </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2014 - 2017</span><br>SMA N 1 BARUS</li>
+                            <li><span>March 2021 - Current</span><br>Universitas Bina Sarana Informatika<br>Bachelor of Information Technology (S1)
+                            </li>
+                            <li><span>August 2023 - January 2024</span><br>MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka<br>Mobile Development Student | Android Learning Path
+                            </li>
+                            <li><span>January 2024 - Current</span><br>Data Analysis and Visualization by Kominfo<br>Student (Talent Scouting Academy) - Data Science | Data-Driven Disaster Preparedness and Post-Disaster Resilience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Android Developer</h2>
+                    <p>I focus on developing Android applications using Kotlin programming language. My responsibilities include designing and implementing responsive and intuitive applications, as well as integrating advanced features such as APIs, Firebase, and Android device hardware. I also ensure performance optimization and regularly debug to enhance user experience.</p>
+                    <a href="https://github.com/usmarmanalu/">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Data Analyst</h2>
+                    <p>I utilize Python and R programming languages to analyze data. I produce data visualizations that aid in identifying useful trends and patterns for businesses. Additionally, I am involved in building predictive models and applying machine learning algorithms for more effective data processing. The interpretations of my analysis results significantly contribute to informed decision-making.</p>
+                    <a href="https://github.com/usmarmanalu/">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                    <h2>Program Analyst</h2>
+                    <p> I specialize in conducting in-depth analyses of programs and applications to enhance performance and efficiency. I am tasked with identifying issues and debugging to improve system stability and functionality. Furthermore, I engage in mapping and enhancing software architecture to achieve better scalability and security. Cross-platform integration and comprehensive system testing are also my primary focuses to ensure consistency in user experience.</p>
+                    <a href="https://github.com/usmarmanalu/">Learn more</a>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+<!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>SaveMoney App</h3>
+                        <P>SaveMoney: Easy Save Your Money, Makes You Happy. An application designed to efficiently consolidate and manage finances. With a user-friendly interface, this app helps users track expenses easily. It also enhances financial literacy and aids in achieving financial goals.</P>
+                        <a href="https://github.com/SaveMoneyCapstone"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Story App</h3>
+                        <P>The Story App is my personal project, accessible to users of all ages, offering a diverse collection of stories and interactive features for immersive storytelling experiences.</P>
+                        <a href="https://github.com/usmarmanalu/Story-App"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Github User App</h3>
+                        <P>The Github User App, my personal project, offers a user-friendly platform to explore Github profiles and repositories. Users can discover projects, follow developers, and stay updated with their latest activities.</P>
+                        <a href="https://github.com/usmarmanalu/GithubAPI"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/usmarmanalu/" class="btn">See More</a>
+        </div>
+    </div>
+
+<!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> usmarmnl99@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +62 82123934946</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/usmar-manalu-44b8711b1/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/usmarmnl9699"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.x.com/Usmarmnl99Usmar"><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+
+                    <a href="data/CV USMAR MANALU.pdf" download class="btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 usmarmanalu</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
