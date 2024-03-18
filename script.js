@@ -2,78 +2,75 @@ var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
 function opentab(tabname) {
-    for(tablink of tablinks) {
-        tablink.classList.remove("active-link");
-    }
+  for (tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
 
-    for(tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
 
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
 }
 
-    var sidemenu = document.getElementById("sidemenu");
-    closemenu(); // Panggil closemenu saat dokumen dimuat pertama kali
-
+var sidemenu = document.getElementById("sidemenu");
+closemenu(); // Panggil closemenu saat dokumen dimuat pertama kali
 
 function openmenu() {
-    var sidemenu = document.getElementById("sidemenu");
-    sidemenu.classList.remove("closed"); // Hapus kelas "closed" untuk menampilkan menu
+  var sidemenu = document.getElementById("sidemenu");
+  sidemenu.classList.remove("closed"); // Hapus kelas "closed" untuk menampilkan menu
 }
 
 function closemenu() {
-    var sidemenu = document.getElementById("sidemenu");
-    sidemenu.classList.add("closed"); // Tambahkan kelas "closed" untuk menyembunyikan menu
+  var sidemenu = document.getElementById("sidemenu");
+  sidemenu.classList.add("closed"); // Tambahkan kelas "closed" untuk menyembunyikan menu
 }
 
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyCB7smtVMAhO9aPBj3PEC8TPUu2YOprdJbxJiMxzPQ0rBbpwM89jyJCmi31pJlOJfVDQ/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyCB7smtVMAhO9aPBj3PEC8TPUu2YOprdJbxJiMxzPQ0rBbpwM89jyJCmi31pJlOJfVDQ/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Sukses!!, Pesan Anda telah terkirim."
-        setTimeout(function() {
-            msg.innerHTML = ""
-        }, 5000)
-        form.reset()
-
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.innerHTML = "Sukses!!, Pesan Anda telah terkirim.";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
 
 function showAlert() {
-    alert("Maaf, link sertifikat ini belum tersedia.");
+  alert("Maaf, link sertifikat ini belum tersedia.");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var fab = document.getElementById("fab");
-    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-    window.addEventListener("scroll", function() {
-      var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        fab.style.bottom = "40px"; // Show FAB
-      } else {
-        // Scrolling up
-        fab.style.bottom = "-60px"; // Hide FAB
-      }
-      lastScrollTop = currentScrollTop;
-    });
-  
-    // Scroll to top when FAB is clicked
-    fab.addEventListener("click", function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  var fab = document.getElementById("fab");
+  var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  window.addEventListener("scroll", function () {
+    var currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop > lastScrollTop) {
+      // Scrolling down
+      fab.style.bottom = "40px"; // Show FAB
+    } else {
+      // Scrolling up
+      fab.style.bottom = "-60px"; // Hide FAB
+    }
+    lastScrollTop = currentScrollTop;
+  });
+
+  // Scroll to top when FAB is clicked
+  fab.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
   });
-  
-
+});

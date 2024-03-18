@@ -36,18 +36,19 @@ body {
     cursor: pointer;
     font-size: 30px;
     display: flex;
-    transition: bottom 0.3s; 
-    z-index: 100;/* Add transition effect */
-  }
-  
-  .fab:hover {
+    transition: bottom 0.3s;
+    z-index: 100;
+    /* Add transition effect */
+}
+
+.fab:hover {
     background-color: #0056b3;
-  }
-  
-  .fab i {
+}
+
+.fab i {
     font-size: 24px;
     margin-top: 16px;
-  }
+}
 
 #header {
     width: 100%;
@@ -183,7 +184,7 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 
-.tab-contents span.list-job ul li{
+.tab-contents span.list-job ul li {
     list-style-type: square;
 
 }
@@ -296,7 +297,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #004aad);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #004aad);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -401,7 +402,8 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -439,13 +441,14 @@ nav .fa-solid {
     #header {
         background-image: url(images/phone.png);
     }
+
     .header-text {
         margin-top: 100%;
         font-size: 16px;
     }
 
     .header-text h1 {
-       font-size: 30px; 
+        font-size: 30px;
     }
 
     #sidemenu.closed {
@@ -462,14 +465,14 @@ nav .fa-solid {
         right: 30px;
         width: 50px;
         height: 50px;
-      }
-    
-      .fab i {
+    }
+
+    .fab i {
         font-size: 16px;
-      }
+    }
 
     nav ul {
-        background:#004aad;
+        background: #004aad;
         position: fixed;
         top: 0;
         right: -20px;
@@ -496,8 +499,10 @@ nav .fa-solid {
         font-size: 40px;
     }
 
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;;
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        ;
     }
 
     .about-col-1 {
@@ -522,7 +527,8 @@ nav .fa-solid {
         margin-right: 20px;
     }
 
-    .contact-left, .contact-right {
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
     }
 
