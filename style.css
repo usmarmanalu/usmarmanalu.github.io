@@ -14,6 +14,15 @@ body {
     color: #fff;
 }
 
+#sidemenu {
+    display: block; /* Sembunyikan menu secara default */
+    transition: right 0.s ease;
+}
+
+#sidemenu.closed {
+    display: none;
+}
+
 .fab {
     position: fixed;
     width: 60px;
@@ -446,10 +455,10 @@ nav .fa-solid {
     }
 
     .fab {
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
       }
     
       .fab i {

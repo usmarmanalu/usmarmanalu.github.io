@@ -14,15 +14,20 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-var sidemenu = document.getElementById("sidemenu");
+    var sidemenu = document.getElementById("sidemenu");
+    closemenu(); // Panggil closemenu saat dokumen dimuat pertama kali
+
 
 function openmenu() {
-    sidemenu.style.right = "0";
+    var sidemenu = document.getElementById("sidemenu");
+    sidemenu.classList.remove("closed"); // Hapus kelas "closed" untuk menampilkan menu
 }
 
 function closemenu() {
-    sidemenu.style.right = "-200px";
+    var sidemenu = document.getElementById("sidemenu");
+    sidemenu.classList.add("closed"); // Tambahkan kelas "closed" untuk menyembunyikan menu
 }
+
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyCB7smtVMAhO9aPBj3PEC8TPUu2YOprdJbxJiMxzPQ0rBbpwM89jyJCmi31pJlOJfVDQ/exec'
   const form = document.forms['submit-to-google-sheet']
