@@ -15,12 +15,11 @@ body {
 }
 
 #sidemenu {
-    display: block; /* Sembunyikan menu secara default */
     transition: right 0.s ease;
 }
 
 #sidemenu.closed {
-    display: none;
+    display: block;
 }
 
 .fab {
@@ -447,6 +446,10 @@ nav .fa-solid {
 
     .header-text h1 {
        font-size: 30px; 
+    }
+
+    #sidemenu.closed {
+        display: none;
     }
 
     nav .fa-solid {
