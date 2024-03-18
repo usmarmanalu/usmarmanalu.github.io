@@ -41,3 +41,34 @@ function closemenu() {
       })
       .catch(error => console.error('Error!', error.message))
   })
+
+function showAlert() {
+    alert("Maaf, link sertifikat ini belum tersedia.");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var fab = document.getElementById("fab");
+    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+    window.addEventListener("scroll", function() {
+      var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        fab.style.bottom = "40px"; // Show FAB
+      } else {
+        // Scrolling up
+        fab.style.bottom = "-60px"; // Hide FAB
+      }
+      lastScrollTop = currentScrollTop;
+    });
+  
+    // Scroll to top when FAB is clicked
+    fab.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+

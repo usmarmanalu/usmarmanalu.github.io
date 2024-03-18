@@ -14,6 +14,33 @@ body {
     color: #fff;
 }
 
+.fab {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #004aad;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    transition: bottom 0.3s; 
+    z-index: 100;/* Add transition effect */
+  }
+  
+  .fab:hover {
+    background-color: #0056b3;
+  }
+  
+  .fab i {
+    font-size: 24px;
+    margin-top: 16px;
+  }
+
 #header {
     width: 100%;
     height: 100vh;
@@ -148,13 +175,40 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 
-.tab-contents span {
+.tab-contents span.list-job ul li{
+    list-style-type: square;
+
+}
+
+.tab-contents span.experience-duration {
     color: #004aad;
     font-size: 20px;
+    text-decoration: underline;
+
+}
+
+.tab-contents span.experience-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .tab-contents {
     display: none;
+}
+
+.tab-contents .certification-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.tab-contents .certification-link:hover {
+    color: #004aad;
+}
+
+.tab-contents .certification-link:visited {
+    color: #004aad;
 }
 
 .tab-contents.active-tab {
@@ -390,6 +444,17 @@ nav .fa-solid {
         display: block;
         font-size: 25px;
     }
+
+    .fab {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+      }
+    
+      .fab i {
+        font-size: 16px;
+      }
 
     nav ul {
         background:#004aad;

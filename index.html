@@ -8,6 +8,13 @@
     <script src="https://kit.fontawesome.com/dde1146e1a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!-- fab -->
+    <div class="fab" id="fab" onclick="scrollTop()">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+      
     <div id="header">
         <div class="container">
             <nav>
@@ -45,39 +52,116 @@
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certification')">Certification</p>
+
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Android Developer</span><br>Develop Android applications using Kotlin.</li>
-                            <li><span>Data Analyst</span><br>Analyze data using Python and R for insights and decision-making.</li>
-                            <li><span>Program Analyst</span><br>Analyze programs and applications for optimization, utilizing both web and app platforms.</li>
-                            <li><span>Git & Github</span><br>Proficient in using Git and Github for version control and collaboration.</li>
-                            <li><span>Communication</span><br>Strong verbal and written communication skills, able to convey technical concepts effectively to both technical and non-technical stakeholders.</li>
-                            <li><span>Problem Solving</span><br>Skilled in identifying and solving complex problems efficiently.</li>
+                            <li><span class="experience-title">Android Developer</span><br>Develop Android applications using Kotlin.</li>
+                            <li><span class="experience-title">Data Analyst</span><br>Analyze data using Python and R for insights and decision-making.</li>
+                            <li><span class="experience-title">Program Analyst</span><br>Analyze programs and applications for optimization, utilizing both web and app platforms.</li>
+                            <li><span class="experience-title">Git & Github</span><br>Proficient in using Git and Github for version control and collaboration.</li>
+                            <li><span class="experience-title">Communication</span><br>Strong verbal and written communication skills, able to convey technical concepts effectively to both technical and non-technical stakeholders.</li>
+                            <li><span class="experience-title">Problem Solving</span><br>Skilled in identifying and solving complex problems efficiently.</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>August 2023 - January 2024</span><br>MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka<br>Mobile Development Student (Graduated)</li>
-                            <li><span>November - Desember 2023</span><br>Capstone Project | SaveMoney App<br>The Bangkit Academy Final Project collaborates with students on the cloud computing and machine learning learning path.<br><br>• An application designed to efficiently consolidate and manage finances. With a user-friendly and intuitive interface, this app can help users track their expenses more easily. It also serves as a comprehensive tool that enhances financial literacy and aids individuals in achieving their financial goals 📱💸.</li>
-                            <li><span>March 2023 - Current</span><br>BEM Faculty of Informatics Engineering<br>Divisi Creative Director<br><br>• Designed promotional materials including Instagram
-                                content, posters, banners, and standing banners.
-                                </li>
+                        <ul class="list-experience">
+                            <li>
+                                <span class="experience-duration">August 2023 - January 2024</span><br>
+                                <span class="experience-title">MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka</span><br>
+                                <span class="experience-role">Mobile Development Student (Graduated)</span>
+                            
+                                <span class="list-job">
+                                    <ul>
+                                        <li>Engaged in a career readiness program sponsored by Google, GoTo, Traveloka, and the Deeptech Foundation.</li>
+                                        <li>Key Courses: Kotlin Programming, Introduction to
+                                            Android App Development, Intermediate Android
+                                            Development, SOLID Principles, Jetpack Compose, and
+                                            Associate Android Developer exam simulation.
+                                            </li>
+                                        <li> Actively participated in soft skills training and English
+                                            language classes conducted by experienced professionals.
+                                            </li>
+                                        <li> Contributed to the "SaveMoney" Capstone project
+                                            focusing on finance management applications.
+                                            </li>
+                                        <li> Represented Bangkit as a Student Ambassador, fostering
+                                            program awareness across campuses.
+                                            </li>
+                                    </ul>
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="experience-duration">November - Desember 2023</span><br>
+                                <span class="experience-title">Capstone Project | SaveMoney App</span><br>
+                                <span class="experience-role">The Bangkit Academy Final Project collaborates with students on the cloud computing and machine learning learning path.</span>
+                                
+                                <span class="list-job">
+                                    <ul>
+                                        <li>
+                                        An application designed to efficiently consolidate and manage finances. With a user-friendly and intuitive interface, this app can help users track their expenses more easily. It also serves as a comprehensive tool that enhances financial literacy and aids individuals in achieving their financial goals.</li>
+                                    </ul>
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="experience-duration">March 2023 - March 2024</span><br>
+                                <span class="experience-title">BEM Faculty of Informatics Engineering</span><br>
+                                <span class="experience-role">Divisi Creative Director</span><br>
+                                
+                                <span class="list-job">
+                                    <ul>
+                                        <li>Designed promotional materials including Instagram content, posters, banners, and standing banners.</li>
+                                    </ul>
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="experience-duration">May - July 2022</span><br>
+                                <span class="experience-title">Fasilitasi Baparekraf Digital Talent 2022</span><br>
+                                <span class="experience-role">Web Programming Basics</span>
+                            </li>
                         </ul>
                     </div>
+                    
 
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2014 - 2017</span><br>SMA N 1 BARUS</li>
-                            <li><span>March 2021 - Current</span><br>Universitas Bina Sarana Informatika<br>Bachelor of Information Technology (S1)
+                            <li><span class="experience-duration">2014 - 2017</span><br>
+                                <span class="experience-title">SMA N 1 BARUS</span></li>
+
+                            <li><span class="experience-duration">March 2021 - Current</span><br>
+                                <span class="experience-title">Universitas Bina Sarana Informatika</span><br>Bachelor of Information Technology (S1)
                             </li>
-                            <li><span>August 2023 - January 2024</span><br>MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka<br>Mobile Development Student | Android Learning Path
+
+                            <li><span class="experience-duration">August 2023 - January 2024</span><br>
+                                <span class="experience-title">MSIB Kampus Merdeka | Bangkit Academy 2023 by Google, GoTo, Traveloka</span><br>Mobile Development Student | Android Learning Path
                             </li>
-                            <li><span>January 2024 - Current</span><br>Data Analysis and Visualization by Kominfo<br>Student (Talent Scouting Academy) - Data Science | Data-Driven Disaster Preparedness and Post-Disaster Resilience</li>
+
+                            <li><span class="experience-duration">January 2024 - Current</span><br>
+                                <span class="experience-title">Data Analysis and Visualization by Kominfo</span><br>Student (Talent Scouting Academy) - Data Science | Data-Driven Disaster Preparedness and Post-Disaster Resilience</li>
                         </ul>
                     </div>
+
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1vF31iNmKxFghRdV_MhiQ6NlcH1ud3IbF/view?usp=sharing" class="certification-link">Certificate of Completion Bangkit Academy 2023</a></li>
+                            <li><a href="https://www.dicoding.com/certificates/1OP818068ZQK" class="certification-link">Belajar Pengembangan Aplikasi Android Intermediate - Dicoding Indonesia</a></li>
+                            <li><a href="https://www.dicoding.com/certificates/6RPN4YWO9X2M" class="certification-link">Belajar Fundamental Aplikasi Android - Dicoding Indonesia</a></li>
+                            <li><a href="https://www.dicoding.com/certificates/KEXL0KW8MPG2" class="certification-link">Belajar Dasar Git dengan GitHub - Dicoding Indonesia</a></li>
+                            <li><a href="https://www.dicoding.com/certificates/N9ZO6K9QRXG5" class="certification-link">Memulai Dasar Pemrograman untuk Menjadi Pengembang Software - Dicoding Indonesia</a></li>
+                            <li><a href="https://drive.google.com/drive/folders/1R6mD4YKu5jsuUEjwAH9kKy2Sa1wrKx9i?usp=sharing" class="certification-link">Statistic using Python for Data Science - DQLab</a></li>
+                            <li><a href="https://drive.google.com/file/d/1azRTrAOlEfwQiyqOMd5nXCzXELkCY2Re/view?usp=sharing" class="certification-link">Exploratory Data Analysis with Python for Beginner - DQLab</a></li>
+                            <li><a href="https://drive.google.com/file/d/1-5DgpvndTIHvEd5J2t4xtOrUllHmNl1Y/view?usp=sharing" class="certification-link">Python Fundamental for Data Science - DQLab</a></li>
+                            <li><a href="https://drive.google.com/file/d/1mQGvfQ1hu4B1SeTXbzjgYnuBBi5guMuj/view?usp=sharing" class="certification-link">Data Preparation in Data Science using R - DQLab</a></li>
+                            <li><a href="#about" class="certification-link" onclick="showAlert()">BNSP Program Analysis Certification</a></li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </div>
